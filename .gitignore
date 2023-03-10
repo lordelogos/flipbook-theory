@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # assets
-public/assets
+assets

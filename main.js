@@ -8,7 +8,7 @@ const context = canvas.getContext("2d");
 const frameCount = 64;
 const currentFrame = (index) => {
   // path to assets
-  // return `/assets/${index.toString().padStart(4, "0")}.png`;
+  // return `assets/${index.toString().padStart(4, "0")}.png`;
   return `https://www.apple.com/105/media/us/airpods-pro/2022/d2deeb8e-83eb-48ea-9721-f567cf0fffa8/anim/hero/large/${index
     .toString()
     .padStart(4, "0")}.png`;
@@ -25,9 +25,6 @@ const preloadImages = () => {
 // change the image drawn on the canvas
 const updateImage = (index) => {
   img.src = currentFrame(index);
-  // clean up the prev image for transparent pngs
-  // also increase performance
-  context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(img, 0, 0, canvas.width, canvas.height);
 };
 
@@ -35,6 +32,9 @@ const updateImage = (index) => {
 const img = new Image();
 img.src = currentFrame(1);
 img.onload = function () {
+  // clears prev image on canvas *necessary for transparent pngs
+  // also increase performance
+  context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(img, 0, 0, canvas.width, canvas.height);
 };
 
