@@ -1,6 +1,7 @@
 # README
 
 # Flipbook v0.0.0 Demo
+View demo [here](https://twitter.com/pauloe_me/status/1634269323232530436?s=20).  
 This project requires users to clone and setup assets locally to use it. Here are the instructions for getting started:
 
 ## Cloning the Project
