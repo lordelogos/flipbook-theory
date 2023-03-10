@@ -8,7 +8,6 @@ const context = canvas.getContext("2d");
 const frameCount = 64;
 const currentFrame = (index) => {
   // path to assets
-  // Demo can be found in assets folder
   // return `/assets/${index.toString().padStart(4, "0")}.png`;
   return `https://www.apple.com/105/media/us/airpods-pro/2022/d2deeb8e-83eb-48ea-9721-f567cf0fffa8/anim/hero/large/${index
     .toString()
